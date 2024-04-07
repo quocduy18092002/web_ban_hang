@@ -96,3 +96,36 @@ select{
     height: 30px;
     width: 200px;
 }
+.admin-content-right-product_add h1{
+    padding-bottom: 20px;
+}
+.admin-content-right-product_add input,select{
+    height: 30px;
+    width: 200px;
+    padding-left: 12px;
+    margin: 6px 0 12px 0;
+    display: block;
+}
+
+.admin-content-right-product_add textarea{
+    height: 300px;
+    width: 500px;
+    display: block;
+    padding-left: 12px;
+
+}
+.admin-content-right-product_add button{
+    display: block;
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+    background-color: #ddd;
+    border: none;
+}
+
+.admin-content-right-product_add button:hover{
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+}
