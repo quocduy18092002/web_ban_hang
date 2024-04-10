@@ -56,16 +56,23 @@ if($_SERVER['REQUEST_METHOD']=== 'POST'){
                     <label for="">Giá khuyến mãi <span style="color: red;">*</span></label>
                     <input name="product_price_new" required type="text" >
                     <label for="">Mô tả<span style="color: red;">*</span></label>
-                    <textarea name="product_desc" id="" cols="30" rows="10" ></textarea>
+                    <textarea name="product_desc" id="editor1" rows="10" cols="80">
+            </textarea>
                     <label for="">Ảnh sản phẩm <span style="color: red;">*</span></label>
                     <input name="product_img" required type="file">
                     <label for="">Ảnh mô tả<span style="color: red;">*</span></label>
                     <input name="product_img_desc[]" multiple required type="file">
                     <button type="submit">Thêm</button>
-                </form>
+
+                   </form>
             </div>
         </div>
 
     </section>
 </body>
+ <script>
+                // Replace the <textarea id="editor1"> with a CKEditor 4
+                // instance, using default configuration.
+                CKEDITOR.replace( 'editor1' );
+            </script>                
 </html>

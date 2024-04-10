@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleadmin.css">
+    <script src="ckeditor/ckeditor.js"></script>
     <title>Danh mục sản phẩm</title>
 </head>
 <body>
