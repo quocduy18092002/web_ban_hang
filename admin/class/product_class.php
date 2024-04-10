@@ -12,13 +12,13 @@ class product{
     }
 
     public function show_category(){
-        $query = "SELECT * FROM tbl_category ORDER BY category_id DESC";
+        $query = "SELECT * FROM tbl_category ORDER BY category_id ASC";
         $result = $this ->db->select($query);
         return $result;
     }
   
     public function show_brand() {
-        $query = "SELECT * FROM tbl_brand ORDER BY brand_id DESC";
+        $query = "SELECT * FROM tbl_brand ORDER BY brand_id ASC";
         $result = $this->db->select($query);
         return $result;
     }
@@ -65,6 +65,16 @@ class product{
             }
         }
         // header('Location: productlist.php');
+        return $result;
+    }
+
+    public function show_product() {
+        $query = "SELECT tbl_product.*, tbl_category.category_name, tbl_brand.brand_name 
+        FROM tbl_product
+        INNER JOIN tbl_category ON tbl_product.category_id = tbl_category.category_id
+        INNER JOIN tbl_brand ON tbl_product.brand_id = tbl_brand.brand_id
+        ORDER BY tbl_product.product_id ASC"; 
+        $result = $this->db->select($query);
         return $result;
     }
 

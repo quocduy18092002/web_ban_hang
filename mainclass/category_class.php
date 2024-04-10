@@ -15,7 +15,7 @@ class category{
     }
 
     public function show_category(){
-        $query = "SELECT * FROM tbl_category ORDER BY category_id DESC";
+        $query = "SELECT * FROM tbl_category ORDER BY category_id ASC";
         $result = $this ->db->select($query);
         return $result;
     }

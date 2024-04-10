@@ -53,7 +53,7 @@ if($_SERVER['REQUEST_METHOD']=== 'POST'){
                      </select>
                     <label for="">Giá sản phẩm <span style="color: red;">*</span></label>
                     <input name="product_price" required type="text" >
-                    <label for="">Giá sản phẩm <span style="color: red;">*</span></label>
+                    <label for="">Giá khuyến mãi <span style="color: red;">*</span></label>
                     <input name="product_price_new" required type="text" >
                     <label for="">Mô tả<span style="color: red;">*</span></label>
                     <textarea name="product_desc" id="" cols="30" rows="10" ></textarea>
