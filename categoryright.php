@@ -29,19 +29,9 @@ $show_product = $product -> show_product();
                     </div>
                     <div class="category-right-content row">
                         <div class="category-right-content-item">
-                        <?php
-                if($show_product){$i=0;
-                    while($result = $show_product->fetch_assoc()){$i++
-                
-                ?>
-                            <img src="<?php echo $result['product_img']  ?>" alt="">
+                            <img src="image/sp1.jpg" alt="">
                             <h1>COSMOS SET - ÁO CÔNG SỞ PEPLUM VÀ CHÂN VÁY XÒE</h1>
                             <p>100<sup>đ</sup></p>
-
-                            <?php
-                    }
-                }
-                            ?>
                         </div>
                         <div class="category-right-content-item">
                             <img src="image/sp2.jpg" alt="">
