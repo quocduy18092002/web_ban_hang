@@ -10,7 +10,7 @@
 <body>
     <?php
     include("header.php");
-  
+    include("categorylist.php");
     include("footer.php"); 
     ?>
        

@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD']=== 'POST'){
                     <label for="">Nhập tên sản phẩm <span style="color: red;">*</span></label>
                     <input name="product_name" required type="text" >
                     <label for="">Chọn danh mục <span style="color: red;">*</span></label>
-                    <select name="category_id" id="" >
+                    <select name="category_id" id="category_id" >
                     <option value="#">--Chọn </option>
                         <?php
                         $show_category = $product -> show_category();
@@ -37,19 +37,9 @@ if($_SERVER['REQUEST_METHOD']=== 'POST'){
                     ?>
                      </select>
                     <label for="">Chọn loại sản phẩm<span style="color: red;">*</span></label>
-                    <select name="brand_id" id="" >
+                    <select name="brand_id" id="brand_id" >
                     <option value="#">--Chọn </option>
-                        <?php
-                        $show_brand = $product -> show_brand();
-                        if($show_brand){
-                            while ($result = $show_brand -> fetch_assoc()){
-                        ?>
-                        <option value="<?php echo $result['brand_id'] ?>"><?php echo $result['brand_name'] ?></option>
-                   
-                    <?php
-                        }
-                    }
-                    ?>
+                     
                      </select>
                     <label for="">Giá sản phẩm <span style="color: red;">*</span></label>
                     <input name="product_price" required type="text" >
@@ -74,5 +64,18 @@ if($_SERVER['REQUEST_METHOD']=== 'POST'){
                 // Replace the <textarea id="editor1"> with a CKEditor 4
                 // instance, using default configuration.
                 CKEDITOR.replace( 'editor1' );
-            </script>                
+            </script> 
+            
+            
+<script>
+    $(document).ready(function(){
+        $('#category_id').change(function(){
+            // alert($(this).val())
+            var x =$(this).val()
+            $.get("productadd_ajax.php",{category_id:x},function(data){
+                $("#brand_id").html(data);
+            })
+        })
+    })
+</script>
 </html>

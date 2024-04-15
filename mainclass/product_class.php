@@ -1,7 +1,4 @@
-<?php
-include "database.php";
 
-?>
 <?php
 class product{
     private $db;

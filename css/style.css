@@ -70,7 +70,8 @@ a{
     display: flex;
 }
 
-.top-menu-items ul li{
+
+.top-menu-items ul li>a{
     font-family: var(--main-text-font);
     padding: 0 12px;
     height: 100%;
@@ -83,6 +84,7 @@ a{
     cursor: pointer;
     position: relative;
     z-index: 1;
+    color: #000;
 }
 .top-menu-items ul li::before{
     position: absolute;
@@ -339,10 +341,14 @@ a{
 }
 .category-top p{
     font-family: var(--main-text-font);
-    margin: 0 12px;
+    margin: 20px 12px 0 0;
     font-size: 12px;
+    display: block;
 }
 
+.category-top span{
+    margin: 20px 12px 0 0;
+}
 .category-left{
     width: 20%;
 }
@@ -418,14 +424,17 @@ a{
     padding: 10px 0;
  }
 
- .category-left ul li a{
+ .category-left ul li {
     color: black;
     font-size: 16px;
     font-weight: bold;
     font-family:var(--main-text-font);
+    cursor: pointer;
  }
 
  .category-left ul li ul li{
+    font-weight: normal;
+    font-size: 15px;
     padding: 10px;
  }
 

@@ -1,5 +1,9 @@
-
 <?php
+include ("admin/database.php");
+
+?>
+<?php
+
 class brand{
     private $db;
     public function __construct()
@@ -25,6 +29,12 @@ class brand{
         INNER JOIN tbl_category ON tbl_brand.category_id = tbl_category.category_id 
         ORDER BY tbl_brand.brand_id ASC";
         $result = $this->db->select($query);
+        return $result;
+    }
+
+    public function show_brand_ajax($category_id){
+        $query = "SELECT * FROM tbl_brand WHERE category_id = '$category_id'";
+        $result = $this ->db->select($query);
         return $result;
     }
     public function get_brand($brand_id){
